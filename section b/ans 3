@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    printf("The first 10 even numbers are:\n");
+    for (int i = 2, count = 0; count < 10; i += 2) {
+        printf("%d ", i);
+        count++;
+    }
+    printf("\n");
+    return 0;
+}
