@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Enter the number of even numbers to print (n): ");
+    scanf("%d", &n);
+
+   if (n <= 0) {
+        printf("Please enter a positive integer.\n");
+        return 1;
+    }
+
+   printf("The first %d even numbers are:\n", n);
+    for (int i = 2, count = 0; count < n; i += 2) {
+        printf("%d ", i);
+        count++;
+    }
+    printf("\n");
+
+    return 0;
+}
