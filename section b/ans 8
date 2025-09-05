@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Enter the number of odd numbers to sum (n): ");
+    scanf("%d", &n);
+
+    if (n <= 0) {
+        printf("Please enter a positive integer.\n");
+        return 1;
+    }
+
+    int sum = n * n;
+
+    printf("The first %d odd numbers are: ", n);
+    for (int i = 1, count = 0; count < n; i += 2) {
+        printf("%d ", i);
+        count++;
+    }
+    printf("\nTheir sum is: %d\n", sum);
+
+    return 0;
+}
