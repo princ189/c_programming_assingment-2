@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <limits.h>
+
+int main() {
+    int num, largest = INT_MIN, smallest = INT_MAX, count = 0;
+    
+    printf("Enter 100 numbers:\n");
+    while (count < 100) {
+        if (scanf("%d", &num) == 1) { 
+            if (num > largest) largest = num;
+            if (num < smallest) smallest = num;
+            count++;
+        } else {
+            printf("Invalid input. Please enter an integer.\n");
+            while (getchar() != '\n');
+        }
+    }
+    
+    if (count == 100) {
+        printf("Largest: %d, Smallest: %d\n", largest, smallest);
+    } else {
+        printf("Error: Could not read 100 valid numbers.\n");
+    }
+    
+    return 0;
+}
