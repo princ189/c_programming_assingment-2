@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int number;
+    
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+
+    if (number < 0) {
+        number = -number;
+    }
+ 
+    if (number == 0) {
+        printf("Factors of 0 are undefined (infinite factors).\n");
+        return 0;
+    }
+
+    printf("Factors of %d are: ", number);
+    for (int i = 1; i <= number; i++) {
+        if (number % i == 0) { 
+            printf("%d", i);
+            if (i != number) { 
+                printf(", ");
+            }
+        }
+    }
+    printf("\n");
+    
+    return 0;
+}
